@@ -84,20 +84,20 @@ const LargeNav = () => {
           ))}
           {/* profile */}
           <Link
-              to="/profile"
-              className="w-full h-auto flex items-center gap-x-4 p-3 bg-transparent hover:bg-gray-800/60 rounded-md ease-out duration-500 group"
-            >
-              <img
-                src="https://source.unsplash.com/random/?profile"
-                alt="ProfileIcon"
-                className="w-6 h-6 rounded-full object-cover group-hover:scale-105 ease-out duration-300"
-              />
-              <p className="text-base font-medium text-white lg:block md:hidden sm:hidden hidden">
-                Profile
-              </p>
-            </Link>
-            {/* more */}
-            <div className="w-full h-auto absolute bottom-0 left-0 px-0">
+            to="/profile"
+            className="w-full h-auto flex items-center gap-x-4 p-3 bg-transparent hover:bg-gray-800/60 rounded-md ease-out duration-500 group"
+          >
+            <img
+              src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&h=100&w=100"
+              alt="ProfileIcon"
+              className="w-6 h-6 rounded-full object-cover group-hover:scale-105 ease-out duration-300"
+            />
+            <p className="text-base font-medium text-white lg:block md:hidden sm:hidden hidden">
+              Profile
+            </p>
+          </Link>
+          {/* more */}
+          <div className="w-full h-auto absolute bottom-1 left-0 px-0">
             <Link
               to="/more"
               className="w-full h-auto flex items-center gap-x-4 p-3 bg-transparent hover:bg-gray-800/60 rounded-md ease-out duration-500 group"
@@ -105,13 +105,13 @@ const LargeNav = () => {
               <img
                 src={MoreLogo}
                 alt="MoreIcon"
-                className="w-5 h-5 rounded-full object-cover group-hover:scale-105 ease-out duration-300"
+                className="w-5 h-[25px] object-cover group-hover:scale-105 ease-out duration-300"
               />
               <p className="text-base font-medium text-white lg:block md:hidden sm:hidden hidden">
                 More
               </p>
             </Link>
-            </div>
+          </div>
         </div>
       </div>
     </>
