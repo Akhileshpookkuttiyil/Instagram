@@ -60,28 +60,30 @@ const Profile = () => {
           </div>
         </div>
         {/* Highlights Section */}
-        <div className="w-full h-auto flex items-center gap-x-9 mb-10">
+        <div className="w-full h-auto flex flex-col items-start gap-y-4 mb-10">
           <div className="max-w-[61vw] w-full h-auto flex items-center gap-x-3.5 overflow-x-scroll">
             {highlightData.map((data) => (
               <Link
                 key={data.id}
                 to="/"
-                className="flex items-center justify-between flex-col flex-shrink-0"
+                className="flex items-center justify-between flex-col"
               >
-                <div className="w-28 h-28 rounded-full object-cover p-[2px] bg-gradient-to-r from-[#1d1d1d] to-[#1d1d1d]">
+                <div className="w-24 h-24 rounded-full object-cover p-[2px] bg-gradient-to-r from-[#1d1d1d] to-[#1d1d1d]">
                   <img
                     src={data.img}
                     alt={data.name}
                     className="rounded-full h-full w-full object-cover p-[2.5px] bg-black"
                   />
-                  <p className="text-white text-sm mt-1 text-ellipse overflow-hidden">
-                    {data.name}
-                  </p>
                 </div>
+                <p className="text-white text-sm mt-1 text-center">
+                  {data.name}
+                </p>
               </Link>
             ))}
           </div>
         </div>
+        {/* Posts,Reels,Tagged section  */}
+        
       </div>
     </>
   );
