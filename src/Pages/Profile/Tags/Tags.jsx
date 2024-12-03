@@ -1,7 +1,9 @@
 const Tags = () => {
-  return (
-    <div>Tags</div>
-  )
-}
+  return <>
 
-export default Tags
+  
+
+  </>;
+};
+
+export default Tags;

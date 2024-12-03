@@ -1,8 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Settings from "../../../Components/Icons/Settings/Settings";
 import LinkIcon from "../../../Components/Icons/LinkIcon/LinkIcon";
 import highlightData from "../HighlightsData";
+import Tab from "./Tab/Tab";
+import PostIcon from "../../../Components/Icons/Post/post.png";
+import ReelsIcon from "../../../Components/Icons/Reels/reel.png";
+import TagIcon from "../../../Components/Icons/Tag/tag.png";
+
 const Profile = () => {
+  const [activeTab, setActiveTab] = useState("posts");
+  const [isContentVisible, setContentVisible] = useState(true);
+
+  const handleTabClick = (tab) => {
+    setContentVisible(false);
+
+    // delay animation
+    setTimeout(() => {
+      setActiveTab(tab);
+      setContentVisible(true);
+    }, 300);
+  };
+
   return (
     <>
       <div className="lg:w-[88%] md:w-[88%] sm:w-full w-full h-auto lg:block md:block sm:hidden hidden">
@@ -83,7 +102,28 @@ const Profile = () => {
           </div>
         </div>
         {/* Posts,Reels,Tagged section  */}
-        
+        <div className="w-full h-auto">
+          <div className="w-full h-auto flex items-center justify-center gap-x-6 mb-4 border-t border-[#313131]">
+            <Tab
+              label="POSTS"
+              icon={PostIcon}
+              isActive={activeTab == "posts"}
+              onClick={() => handleTabClick("posts")}
+            />
+            <Tab
+              label="REELS"
+              icon={ReelsIcon}
+              isActive={activeTab == "reels"}
+              onClick={() => handleTabClick("reels")}
+            />
+            <Tab
+              label="TAGGED"
+              icon={TagIcon}
+              isActive={activeTab == "tagged"}
+              onClick={() => handleTabClick("tagged")}
+            />
+          </div>
+        </div>
       </div>
     </>
   );
