@@ -7,6 +7,8 @@ import Tab from "./Tab/Tab";
 import PostIcon from "../../../Components/Icons/Post/post.png";
 import ReelsIcon from "../../../Components/Icons/Reels/reel.png";
 import TagIcon from "../../../Components/Icons/Tag/tag.png";
+import Posts from "../Posts/Posts";
+import Reels from "../Reels/Reels";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("posts");
@@ -122,6 +124,15 @@ const Profile = () => {
               isActive={activeTab == "tagged"}
               onClick={() => handleTabClick("tagged")}
             />
+          </div>
+          <div
+            className={`mt-4 transition-opacity duration-300 ease-out ${
+              isContentVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {activeTab === "posts" && <Posts />}
+            {activeTab === "reels" && <Reels />}
+            {/* {activeTab === "tagged" && <Tags/>} */}
           </div>
         </div>
       </div>
