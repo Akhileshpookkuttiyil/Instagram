@@ -9,6 +9,7 @@ import ReelsIcon from "../../../Components/Icons/Reels/reel.png";
 import TagIcon from "../../../Components/Icons/Tag/tag.png";
 import Posts from "../Posts/Posts";
 import Reels from "../Reels/Reels";
+import Tags from "../Tags/Tags";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("posts");
@@ -132,7 +133,7 @@ const Profile = () => {
           >
             {activeTab === "posts" && <Posts />}
             {activeTab === "reels" && <Reels />}
-            {/* {activeTab === "tagged" && <Tags/>} */}
+            {activeTab === "tagged" && <Tags />}
           </div>
         </div>
       </div>

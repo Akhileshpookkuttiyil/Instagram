@@ -1,3 +1,4 @@
+import MobileProfile from "./MobileProfile/MobileProfile";
 import Profile from "./Profile/Profile";
 
 const main = () => {
@@ -7,6 +8,7 @@ const main = () => {
         {/* profile for large screen */}
         <Profile/>
         {/* profile for small screen */}
+        <MobileProfile/>
       </div>
     </>
   );
